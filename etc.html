@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Endurance Training Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    input[type="number"] {
+      width: 60px;
+    }
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .result {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Trainingsvolumen-Rechner (12 Wochen)</h1>
+
+  <label>Aktuelles Wochenvolumen:</label><br>
+  <input type="number" id="stunden" placeholder="Stunden"> h
+  <input type="number" id="minuten" placeholder="Minuten"> min<br><br>
+
+  <label>Langer Lauf (Teil des Gesamtvolumens):</label><br>
+  <input type="number" id="longStunden" placeholder="Stunden"> h
+  <input type="number" id="longMinuten" placeholder="Minuten"> min<br><br>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Woche</th>
+        <th>Gesamtvolumen Δ%</th>
+        <th>Langer Lauf Δ%</th>
+      </tr>
+    </thead>
+    <tbody id="inputRows"></tbody>
+  </table>
+
+  <button onclick="berechne()">Berechne Volumen</button>
+
+  <div class="result" id="ergebnis"></div>
+
+  <script>
+    // Zeilen für 12 Wochen erstellen
+    const tbody = document.getElementById("inputRows");
+    for (let i = 0; i < 12; i++) {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>Woche ${i + 1}</td>
+        <td><input type="number" id="volChange${i}" value="0">%</td>
+        <td><input type="number" id="longChange${i}" value="0">%</td>
+      `;
+      tbody.appendChild(row);
+    }
+
+    function berechne() {
+      let stunden = parseInt(document.getElementById("stunden").value) || 0;
+      let minuten = parseInt(document.getElementById("minuten").value) || 0;
+      let longStunden = parseInt(document.getElementById("longStunden").value) || 0;
+      let longMinuten = parseInt(document.getElementById("longMinuten").value) || 0;
+
+      let gesamt = stunden * 60 + minuten;
+      let lang = longStunden * 60 + longMinuten;
+
+      let output = "<h2>Ergebnisse:</h2><table><tr><th>Woche</th><th>Gesamtvolumen</th><th>Langer Lauf</th></tr>";
+
+      for (let i = 0; i < 12; i++) {
+        const volChange = parseFloat(document.getElementById(`volChange${i}`).value) || 0;
+        const longChange = parseFloat(document.getElementById(`longChange${i}`).value) || 0;
+
+        gesamt = gesamt * (1 + volChange / 100);
+        lang = lang * (1 + longChange / 100);
+
+        const gesamtH = Math.floor(gesamt / 60);
+        const gesamtM = Math.round(gesamt % 60);
+
+        const langH = Math.floor(lang / 60);
+        const langM = Math.round(lang % 60);
+
+        output += `<tr><td>Woche ${i + 1}</td><td>${gesamtH}h ${gesamtM}min</td><td>${langH}h ${langM}min</td></tr>`;
+      }
+
+      output += "</table>";
+      document.getElementById("ergebnis").innerHTML = output;
+    }
+  </script>
+</body>
+</html>
