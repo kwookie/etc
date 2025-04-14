@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/trainingsvolumen-rechner/static/css/main.f855e6bc.css",
-    "main.js": "/trainingsvolumen-rechner/static/js/main.88bc075a.js",
+    "main.css": "/trainingsvolumen-rechner/static/css/main.e6c13ad2.css",
+    "main.js": "/trainingsvolumen-rechner/static/js/main.3d63f24e.js",
     "static/js/453.19321f02.chunk.js": "/trainingsvolumen-rechner/static/js/453.19321f02.chunk.js",
-    "static/media/logo.svg": "/trainingsvolumen-rechner/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/trainingsvolumen-rechner/index.html",
-    "main.f855e6bc.css.map": "/trainingsvolumen-rechner/static/css/main.f855e6bc.css.map",
-    "main.88bc075a.js.map": "/trainingsvolumen-rechner/static/js/main.88bc075a.js.map",
+    "main.e6c13ad2.css.map": "/trainingsvolumen-rechner/static/css/main.e6c13ad2.css.map",
+    "main.3d63f24e.js.map": "/trainingsvolumen-rechner/static/js/main.3d63f24e.js.map",
     "453.19321f02.chunk.js.map": "/trainingsvolumen-rechner/static/js/453.19321f02.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.88bc075a.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.3d63f24e.js"
   ]
 }
