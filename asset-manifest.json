@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/etc/static/css/main.e6c13ad2.css",
-    "main.js": "/etc/static/js/main.ff5ef3ed.js",
-    "static/js/453.19321f02.chunk.js": "/etc/static/js/453.19321f02.chunk.js",
+    "main.css": "/etc/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/etc/static/js/main.791b9779.chunk.js",
+    "main.js.map": "/etc/static/js/main.791b9779.chunk.js.map",
+    "runtime~main.js": "/etc/static/js/runtime~main.5e06f19c.js",
+    "runtime~main.js.map": "/etc/static/js/runtime~main.5e06f19c.js.map",
+    "static/css/2.826699c9.chunk.css": "/etc/static/css/2.826699c9.chunk.css",
+    "static/js/2.99b0cee0.chunk.js": "/etc/static/js/2.99b0cee0.chunk.js",
+    "static/js/2.99b0cee0.chunk.js.map": "/etc/static/js/2.99b0cee0.chunk.js.map",
+    "static/js/3.a29efab2.chunk.js": "/etc/static/js/3.a29efab2.chunk.js",
+    "static/js/3.a29efab2.chunk.js.map": "/etc/static/js/3.a29efab2.chunk.js.map",
     "index.html": "/etc/index.html",
-    "main.e6c13ad2.css.map": "/etc/static/css/main.e6c13ad2.css.map",
-    "main.ff5ef3ed.js.map": "/etc/static/js/main.ff5ef3ed.js.map",
-    "453.19321f02.chunk.js.map": "/etc/static/js/453.19321f02.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.ff5ef3ed.js"
-  ]
+    "precache-manifest.3b735e32ac50165228d56d7b6854789a.js": "/etc/precache-manifest.3b735e32ac50165228d56d7b6854789a.js",
+    "service-worker.js": "/etc/service-worker.js",
+    "static/css/2.826699c9.chunk.css.map": "/etc/static/css/2.826699c9.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/etc/static/css/main.5ecd60fb.chunk.css.map"
+  }
 }
