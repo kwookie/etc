@@ -45,7 +45,7 @@ export default function TrainingsvolumenRechner() {
             type="number"
             value={currentHours}
             onChange={(e) => setCurrentHours(Number(e.target.value))}
-            className="border rounded-md p-3 text-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+            className="border rounded p-3 text-lg"
           />
 
           <label className="font-medium">Aktuelle Minuten:</label>
@@ -53,7 +53,7 @@ export default function TrainingsvolumenRechner() {
             type="number"
             value={currentMinutes}
             onChange={(e) => setCurrentMinutes(Number(e.target.value))}
-            className="border rounded-md p-3 text-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+            className="border rounded p-3 text-lg"
           />
 
           <label className="font-medium">Langer Lauf (Minuten):</label>
@@ -61,7 +61,7 @@ export default function TrainingsvolumenRechner() {
             type="number"
             value={currentLongRun}
             onChange={(e) => setCurrentLongRun(Number(e.target.value))}
-            className="border rounded-md p-3 text-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+            className="border rounded p-3 text-lg"
           />
         </div>
 
@@ -69,7 +69,7 @@ export default function TrainingsvolumenRechner() {
           <h2 className="text-lg font-semibold mb-2">Prozentuale Änderungen pro Woche</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {volumeChanges.map((_, i) => (
-              <div key={i} className="text-sm space-y-2">
+              <div key={i} className="text-sm space-y-1">
                 <label className="block font-semibold text-blue-700">Woche {i + 1}</label>
                 <input
                   type="number"
@@ -80,7 +80,7 @@ export default function TrainingsvolumenRechner() {
                     setVolumeChanges(newChanges);
                   }}
                   placeholder="Volumen %"
-                  className="border rounded-md p-2 text-base w-full shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+                  className="border rounded p-2 w-full text-base"
                 />
                 <input
                   type="number"
@@ -91,7 +91,7 @@ export default function TrainingsvolumenRechner() {
                     setLongRunChanges(newChanges);
                   }}
                   placeholder="Langer Lauf %"
-                  className="border rounded-md p-2 text-base w-full shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+                  className="border rounded p-2 w-full text-base"
                 />
               </div>
             ))}
@@ -101,13 +101,13 @@ export default function TrainingsvolumenRechner() {
         <div className="flex gap-4 pt-4">
           <button
             onClick={calculateVolumes}
-            className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 text-lg font-medium"
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
           >
             Berechnen
           </button>
           <button
             onClick={resetForm}
-            className="bg-gray-300 text-black px-6 py-3 rounded-md hover:bg-gray-400 text-lg font-medium"
+            className="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400"
           >
             Zurücksetzen
           </button>

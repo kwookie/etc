@@ -1,6 +1,6 @@
 {
   "name": "etc",
-  "homepage": "https://kwookie.github.io/trainingsvolumen-rechner",
+  "homepage": "https://kwookie.github.io/etc",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
